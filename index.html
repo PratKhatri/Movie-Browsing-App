@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Browser 🎬</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>🎬 Movie Browser</h1>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a movie...">
+        <button id="searchBtn">Search</button>
+        <select id="sortSelect">
+          <option value="default">Sort by...</option>
+          <option value="yearAsc">Year (Oldest → Newest)</option>
+          <option value="yearDesc">Year (Newest → Oldest)</option>
+          <option value="titleAsc">Title (A → Z)</option>
+          <option value="titleDesc">Title (Z → A)</option>
+        </select>
+        <button id="themeToggle" title="Toggle light/dark mode">🌙</button>
+      </div>
+    </header>
+
+    <main>
+      <div id="movieResults" class="movie-results"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

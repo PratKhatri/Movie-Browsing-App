@@ -1,0 +1,133 @@
+:root {
+  --bg-color: #0d0d0d;
+  --text-color: #ffffff;
+  --card-bg: #1c1c1c;
+  --highlight: #ffcc00;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+body.light {
+  --bg-color: #f4f4f4;
+  --text-color: #111111;
+  --card-bg: #ffffff;
+  --highlight: #ff8800;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: var(--highlight);
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input, select, button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+input {
+  width: 240px;
+}
+
+button {
+  background-color: var(--highlight);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #ffd633;
+}
+
+#themeToggle {
+  background: none;
+  color: var(--text-color);
+  font-size: 22px;
+  border: 2px solid var(--highlight);
+  padding: 6px 10px;
+}
+
+.movie-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.movie-card {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px var(--shadow);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 12px;
+}
+
+.movie-info h3 {
+  font-size: 1.1rem;
+  margin: 8px 0 4px 0;
+  color: var(--highlight);
+}
+
+.movie-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  input {
+    width: 180px;
+  }
+}
