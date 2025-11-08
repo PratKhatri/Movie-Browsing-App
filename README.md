@@ -39,10 +39,10 @@ git clone https://github.com/yourusername/movie-browser.git
 cd movie-browser
 ```
 
-2. Open index.html in your browser (no backend needed).
+2. Open `index.html` in your browser (no backend needed).
 
 3. API Key:
-   Replace the apiKey variable in script.js with your own OMDb API key:
+   Replace the `apiKey` variable in `script.js` with your own OMDb API key:
 
 ```javascript
 const apiKey = "YOUR_API_KEY";
